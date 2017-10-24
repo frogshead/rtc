@@ -1,6 +1,6 @@
-update=ma  7. elokuuta 2017 00.11.49
+update=ma  4. syyskuuta 2017 17.08.38
 version=1
-last_client=kicad
+last_client=eeschema
 [pcbnew]
 version=1
 LastNetListRead=
@@ -58,3 +58,13 @@ LibName28=contrib
 LibName29=valves
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1

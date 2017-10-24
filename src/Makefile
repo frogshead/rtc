@@ -79,7 +79,7 @@ OBJDIR = .
 
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = USI_I2C_Master.c
+SRC = USI_I2C_Master.c rtc3231.c dst.c
 
 
 # List C++ source files here. (C dependencies are automatically generated.)

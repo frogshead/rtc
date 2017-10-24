@@ -19,8 +19,8 @@
 void i2c_init(void);
 uint8_t USI_I2C_Master_Transfer(uint8_t);
 uint8_t i2c_get_state_info(void);
-unsigned int i2c_start(uint8_t);
-unsigned int i2c_rep_start(uint8_t);
+uint8_t i2c_start(uint8_t);
+uint8_t i2c_rep_start(uint8_t);
 uint8_t i2c_stop(void);
 uint8_t i2c_write(uint8_t);
 uint8_t i2c_read(uint8_t);
@@ -104,7 +104,7 @@ uint8_t USI_I2C_Master_Transfer(uint8_t temp)
  Function for generating a TWI Start Condition.
  Start condition is SDA going low while SCL is high.
 ---------------------------------------------------------------*/
-unsigned int i2c_start(uint8_t addr)
+uint8_t i2c_start(uint8_t addr)
 {
 	/* Release SCL to ensure that (repeated) Start can be performed */
 	PORT_USI |= (1<<PIN_USI_SCL);                     // Release SCL.
@@ -142,7 +142,7 @@ Issues a repeated start condition and sends address and transfer
 direction.
 A repeated start is just another start: SDA low while SCL high.
 ---------------------------------------------------------------*/
-unsigned int i2c_rep_start(uint8_t addr)
+uint8_t  i2c_rep_start(uint8_t addr)
 {
 	uint8_t tmp;
 	
@@ -161,7 +161,7 @@ unsigned int i2c_rep_start(uint8_t addr)
 Issues a start condition and sends address and transfer direction.
 If device is busy, use ack polling to wait until device is ready
 ---------------------------------------------------------------*/
-unsigned int i2c_start_wait(uint8_t addr)
+uint8_t  i2c_start_wait(uint8_t addr)
 {
 	return 1;
 }
